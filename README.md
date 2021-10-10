@@ -13,4 +13,4 @@ It will be a great way for me to implement all the HTML, CSS and javascript skil
 I intend to:
 -[] Set up a photo carousel which shows examples of my previous bakes
 -[] Make a form for people to 'submit' orders
-=[] Have a blog with my favourite recipes
+-[] Have a blog with my favourite recipes
