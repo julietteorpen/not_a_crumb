@@ -4,6 +4,13 @@
   justify-content: space-between;
 }
 
+.icon {
+  min-width: 20rem;
+  background-color: aquamarine;
+  border-radius: 25%;
+  font-size: 8rem;
+}
+
 .center {
   max-width: 40rem;
   margin-left: auto;
@@ -55,7 +62,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
 }
 
