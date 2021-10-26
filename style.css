@@ -69,3 +69,11 @@
 .column-lg {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
+
+/*______________________*/
+/* LANDING PAGE CSS/*
+/*______________________*/
+
+.landing-title {
+  display: none;
+}
