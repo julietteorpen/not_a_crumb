@@ -30,14 +30,25 @@ function visualise(event) {
   for (let i = 0; i < decorations.length; i++) {
     if (decorations[i].checked === true) {
       total++;
+      console.log("The cake will cost £" + total);
     }
-    console.log(total);
   }
 }
 cakeForm.addEventListener("submit", visualise);
+cakeForm.addEventListener("submit", changeVanillaTier);
 
-// const parent = document.getElementById("parent");
-// let child_nodes = parent.childNodes;
-// console.log(child_nodes.length); // let's assume "2"
-// parent.appendChild(document.createElement("div"));
-// console.log(child_nodes.length); // outputs "3"
+//select the contents of all the cake images
+const cakeImages = Array.from(document.querySelectorAll(".cake-image"));
+console.log(cakeImages);
+
+function changeVanillaTier(event) {
+  //access value as an integer through a variable
+  const value = event.target.elements.tier.value;
+  //hide all userBios
+  for (let i = 0; i < cakeImages.length; i++) {
+    cakeImages[i].classList.add("hidden");
+    if (parseInt(value) === 1) {
+      cakeImages[0].classList.remove("hidden");
+    }
+  }
+}

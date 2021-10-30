@@ -11,6 +11,10 @@
   font-size: 8rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .center {
   max-width: 40rem;
   margin-left: auto;
