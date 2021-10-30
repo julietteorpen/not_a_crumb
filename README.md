@@ -12,8 +12,8 @@ Plus, _*who doesn't love looking at pictures of cake!*_
 It will be a great way for me to implement all the HTML, CSS and javascript skills I've been learning.
 I intend to:
 
-- [ ] Set up a landing page with a grid of photos which shows photosof cakes
+- [x] Set up a landing page with a grid of photos which shows photosof cakes
 - [ ] Set up a photo carousel or interactive photo element to display images
-- [ ] Make a form for people to 'submit' orders
+- [x] Make a form for people to design their cake orders
 - [ ] Have a blog with my favourite recipes
 - [ ] Make a calculator function to price orders
