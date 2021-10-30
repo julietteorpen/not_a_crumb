@@ -22,10 +22,9 @@
   <section>
       <h2> Design your own cake</h2>
 
-
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" />
-      <p> What flavour cake would you like?</p>
+      <input type="number" name="tier" min="1" max="4"/>
+      <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
           <label for="flavour1"> Chocolate </label>
@@ -50,19 +49,23 @@
   <p>What kind of icing would you like?</p>
     <div>
        <input type="radio" name="icing" id="icing1" value="cream-cheese" />
-         <label for="icing1"> Cream Cheese </label>
+         <label for="icing1"> White Chocolate Cream Cheese </label>
     </div>
     <div>
         <input type="radio" name="icing" id="icing2" value="buttercream" />
-         <label for="icing2"> Buttercream </label>
+         <label for="icing2"> Chocolate Buttercream </label>
     </div>
     <div>
          <input type="radio" name="icing" id="icing3" value="fondant" />
-         <label for="icing3"> Fondant Icing </label>
+         <label for="icing3"> Vanilla Fondant Icing </label>
+    </div>
+        <div>    
+          <input type="radio" name="icing" id="icing4" value="lemon-glaze" />
+         <label for="icing4"> Lemon glaze </label>
     </div>
     <div>    
-          <input type="radio" name="icing" id="icing4" value="no-icing" />
-         <label for="icing4"> No icing thanks! </label>
+          <input type="radio" name="icing" id="icing5" value="no-icing" />
+         <label for="icing5"> No icing thanks! </label>
     </div>
 
     <p> Would you like any decoration?</p>
