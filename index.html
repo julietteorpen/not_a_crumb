@@ -21,11 +21,10 @@
 
   <section>
       <h2> Design your own cake</h2>
-
-
+<form class="cake-form">
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" />
-      <p> What flavour cake would you like?</p>
+      <input type="number" name="tier" min="1" max="4" id="tier"/>
+      <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
           <label for="flavour1"> Chocolate </label>
@@ -50,43 +49,49 @@
   <p>What kind of icing would you like?</p>
     <div>
        <input type="radio" name="icing" id="icing1" value="cream-cheese" />
-         <label for="icing1"> Cream Cheese </label>
+         <label for="icing1"> White Chocolate Cream Cheese </label>
     </div>
     <div>
         <input type="radio" name="icing" id="icing2" value="buttercream" />
-         <label for="icing2"> Buttercream </label>
+         <label for="icing2"> Chocolate Buttercream </label>
     </div>
     <div>
          <input type="radio" name="icing" id="icing3" value="fondant" />
-         <label for="icing3"> Fondant Icing </label>
+         <label for="icing3"> Vanilla Fondant Icing </label>
+    </div>
+        <div>    
+          <input type="radio" name="icing" id="icing4" value="lemon-glaze" />
+         <label for="icing4"> Lemon glaze </label>
     </div>
     <div>    
-          <input type="radio" name="icing" id="icing4" value="no-icing" />
-         <label for="icing4"> No icing thanks! </label>
+          <input type="radio" name="icing" id="icing5" value="no-icing" />
+         <label for="icing5"> No icing thanks! </label>
     </div>
 
     <p> Would you like any decoration?</p>
+      <div>
+         <input type="checkbox" name="decoration" id="decoration0" value="none" />
+         <label for="flavour"> No decorations! </label>
+      </div>
     <div>
           <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
          <label for="flavour"> Sprinkles </label>
     </div>  
     <div>
-         <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
+         <input type="checkbox" name="decoration" id="decoration2" value="candles" />
          <label for="flavour"> Candles </label>
       </div>
       <div>
-          <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
-         <label for="flavour"> Spun Sugar </label>
-      </div> 
-      <div>
-         <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
+         <input type="checkbox" name="decoration" id="decoration3" value="flowers" />
          <label for="flavour"> Piped flowers </label>
       </div>
-      <div>
-         <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
-         <label for="flavour"> No decrations! </label>
-      </div>
-  <button>Calculate!</button>
+      <!-- <div>
+          <input type="checkbox" name="decoration" id="decoration1" value="sprinkles" />
+         <label for="flavour"> Spun Sugar </label>
+      </div>  -->
+
+  <button type="submit">Calculate!</button>
+  </form>
 </section>
 
  <p>
