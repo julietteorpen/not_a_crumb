@@ -19,6 +19,16 @@ let decorations = Array.from(document.querySelectorAll("input[type=checkbox]"));
 let vanillaCake = [];
 let chocCake = [];
 
+cakeForm.addEventListener("submit", e => {
+  e.preventDefault();
+  let minMaxTierVal = tier.value;
+  if (minMaxTierVal === 0) {
+    alert("Cakes must be at least one tier!");
+  } else if (minMaxTierVal >= 4) {
+    alert("Cakes can be a maximum of 4 tiers to stop any caketastrophes!");
+  }
+});
+
 function visualise(event) {
   event.preventDefault();
   let total = 0;
@@ -30,14 +40,31 @@ function visualise(event) {
   for (let i = 0; i < decorations.length; i++) {
     if (decorations[i].checked === true) {
       total++;
+      console.log("The cake will cost £" + total);
     }
-    console.log(total);
   }
 }
 cakeForm.addEventListener("submit", visualise);
+cakeForm.addEventListener("submit", changeVanillaTier);
 
-// const parent = document.getElementById("parent");
-// let child_nodes = parent.childNodes;
-// console.log(child_nodes.length); // let's assume "2"
-// parent.appendChild(document.createElement("div"));
-// console.log(child_nodes.length); // outputs "3"
+//select the contents of all the cake images
+const vanillaImages = Array.from(document.querySelectorAll(".vanilla-image"));
+console.log(vanillaImages);
+
+function changeVanillaTier(event) {
+  //access value as an integer through a variable
+  const value = event.target.elements.tier.value;
+  //hide all userBios
+  for (let i = 0; i < vanillaImages.length; i++) {
+    vanillaImages[i].classList.add("hidden");
+    if (parseInt(value) === 1) {
+      vanillaImages[0].classList.remove("hidden");
+    } else if (parseInt(value) === 2) {
+      vanillaImages[1].classList.remove("hidden");
+    } else if (parseInt(value) === 3) {
+      vanillaImages[2].classList.remove("hidden");
+    } else if (parseInt(value) === 4) {
+      vanillaImages[3].classList.remove("hidden");
+    }
+  }
+}

@@ -1,8 +1,19 @@
+body {
+  font-family: "Zen Antique", serif;
+}
+
+/*______________________*/
+/* NAVIGATION CSS/*
+/*______________________*/
 .nav-list {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
 }
+
+/*______________________*/
+/* ICON CSS/*
+/*______________________*/
 
 .icon {
   min-width: 20rem;
@@ -11,10 +22,22 @@
   font-size: 8rem;
 }
 
+/*______________________*/
+/* JS-RELATED CSS/*
+/*______________________*/
+
+.hidden {
+  display: none;
+}
+
+/*______________________*/
+/* LAYOUT CSS/*
+/*______________________*/
+
 .center {
-  max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
+  max-width: 60rem;
 }
 
 .width-sm {
@@ -76,4 +99,15 @@
 
 .landing-title {
   display: none;
+}
+
+/*______________________*/
+/* VISUALISER CSS/*
+/*______________________*/
+.visualiser {
+  display: flex;
+  border: thick double aquamarine;
+  border-radius: 3%;
+  max-width: 40rem;
+  text-align: justify;
 }
