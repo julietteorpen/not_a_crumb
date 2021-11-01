@@ -38,17 +38,23 @@ cakeForm.addEventListener("submit", visualise);
 cakeForm.addEventListener("submit", changeVanillaTier);
 
 //select the contents of all the cake images
-const cakeImages = Array.from(document.querySelectorAll(".cake-image"));
-console.log(cakeImages);
+const vanillaImages = Array.from(document.querySelectorAll(".vanilla-image"));
+console.log(vanillaImages);
 
 function changeVanillaTier(event) {
   //access value as an integer through a variable
   const value = event.target.elements.tier.value;
   //hide all userBios
-  for (let i = 0; i < cakeImages.length; i++) {
-    cakeImages[i].classList.add("hidden");
+  for (let i = 0; i < vanillaImages.length; i++) {
+    vanillaImages[i].classList.add("hidden");
     if (parseInt(value) === 1) {
-      cakeImages[0].classList.remove("hidden");
+      vanillaImages[0].classList.remove("hidden");
+    } else if (parseInt(value) === 2) {
+      vanillaImages[1].classList.remove("hidden");
+    } else if (parseInt(value) === 3) {
+      vanillaImages[2].classList.remove("hidden");
+    } else if (parseInt(value) === 4) {
+      vanillaImages[3].classList.remove("hidden");
     }
   }
 }

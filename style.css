@@ -1,3 +1,6 @@
+/*______________________*/
+/* NAVIGATION CSS/*
+/*______________________*/
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -15,10 +18,14 @@
   display: none;
 }
 
+/*______________________*/
+/* LAYOUT CSS/*
+/*______________________*/
+
 .center {
-  max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
+  max-width: 60rem;
 }
 
 .width-sm {
@@ -81,3 +88,7 @@
 .landing-title {
   display: none;
 }
+
+/*______________________*/
+/* VISUALISER CSS/*
+/*______________________*/
