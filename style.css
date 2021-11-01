@@ -1,3 +1,7 @@
+body {
+  font-family: "Zen Antique", serif;
+}
+
 /*______________________*/
 /* NAVIGATION CSS/*
 /*______________________*/
@@ -7,12 +11,20 @@
   justify-content: space-between;
 }
 
+/*______________________*/
+/* ICON CSS/*
+/*______________________*/
+
 .icon {
   min-width: 20rem;
   background-color: aquamarine;
   border-radius: 25%;
   font-size: 8rem;
 }
+
+/*______________________*/
+/* JS-RELATED CSS/*
+/*______________________*/
 
 .hidden {
   display: none;
@@ -92,3 +104,10 @@
 /*______________________*/
 /* VISUALISER CSS/*
 /*______________________*/
+.visualiser {
+  display: flex;
+  border: thick double aquamarine;
+  border-radius: 3%;
+  max-width: 40rem;
+  text-align: justify;
+}

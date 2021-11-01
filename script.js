@@ -19,6 +19,16 @@ let decorations = Array.from(document.querySelectorAll("input[type=checkbox]"));
 let vanillaCake = [];
 let chocCake = [];
 
+cakeForm.addEventListener("submit", e => {
+  e.preventDefault();
+  let minMaxTierVal = tier.value;
+  if (minMaxTierVal === 0) {
+    alert("Cakes must be at least one tier!");
+  } else if (minMaxTierVal >= 4) {
+    alert("Cakes can be a maximum of 4 tiers to stop any caketastrophes!");
+  }
+});
+
 function visualise(event) {
   event.preventDefault();
   let total = 0;

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>not a crumb.</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
   </head>
 
   <header>
@@ -59,12 +62,12 @@
         class="width-sm"
       />
     </div>
-
-  <section class="center visualiser">
+<div class="visualiser center">
+  <section class="center">
       <h2> Cake Visualiser</h2>
 <form class="cake-form stack-md">
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" min="1" max="4" id="tier"/>
+      <input type="number" name="tier" id="tier"/>
       <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
@@ -134,6 +137,7 @@
   <button type="submit">Calculate!</button>
   </form>
 </section>
+</div>
 <section>
   <img src="images/visualiser/vanillaBC1.jpg" class="hidden vanilla-image one-tier" alt="An image of a 1 tier vanilla buttercream cake with candles is shown"> 
     <img src="images/visualiser/vanillaBC2.png" class="hidden vanilla-image two-tier" alt="An image of a 2 tier vanilla buttercream cake with candles is shown"> 
