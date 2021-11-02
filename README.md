@@ -17,13 +17,14 @@ I intend to:
 - [x] Make a form for people to design their cake orders
 - [ ] Make a functioning 'visualiser' so that a SVG version of the cake appears when order is submitted
 - [ ] Have a blog with my favourite recipes
-- [ ] Make a calculator function to price orders
+- [x] Make a calculator function to price orders
 
 #### Notes on where I'm at and issues I'm working on:
 CAKE VISUALISER:
 - At the moment the form when 1 - 4 tiers are selected in the form, an image of the cake with the appropriate number of tiers will appear once submit is clicked. 
 - I'm working on the JS and graphics so that the exact cake entered will appear  (e.g. chocolate cake with candles vs vanilla cake with sprinkles)
 - I need to explore if the hidden cake graphics will cause an accessibility issue for those on screenreaders.
+- The visualiser will also calculate a price which currently appears in the console log. I plan to make this appear alongside the cake and want to make the pricing structure less basic. 
 
 GENERAL UX and UI
 - More needs to be done to the layout and improving the photo grid when not on a web browers. 
