@@ -12,8 +12,18 @@ Plus, _*who doesn't love looking at pictures of cake!*_
 It will be a great way for me to implement all the HTML, CSS and javascript skills I've been learning.
 I intend to:
 
-- [x] Set up a landing page with a grid of photos which shows photosof cakes
+- [x] Set up a grid of photos which shows photos of cakes and brand name
 - [ ] Set up a photo carousel or interactive photo element to display images
 - [x] Make a form for people to design their cake orders
+- [ ] Make a functioning 'visualiser' so that a SVG version of the cake appears when order is submitted
 - [ ] Have a blog with my favourite recipes
 - [ ] Make a calculator function to price orders
+
+#### Notes on where I'm at and issues I'm working on:
+CAKE VISUALISER:
+- At the moment the form when 1 - 4 tiers are selected in the form, an image of the cake with the appropriate number of tiers will appear once submit is clicked. 
+- I'm working on the JS and graphics so that the exact cake entered will appear  (e.g. chocolate cake with candles vs vanilla cake with sprinkles)
+- I need to explore if the hidden cake graphics will cause an accessibility issue for those on screenreaders.
+
+GENERAL UX and UI
+- More needs to be done to the layout and improving the photo grid when not on a web browers. 
