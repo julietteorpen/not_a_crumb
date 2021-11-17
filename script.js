@@ -82,6 +82,9 @@ function changeVanillaTier(event) {
   }
 }
 
+//Function to update DOM with random recipe title
+
+
 //Function to fetch random recipe from the Guardian
 function fetchRecipe()
 /*----------------------------------------------------*\
