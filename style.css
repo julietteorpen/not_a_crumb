@@ -1,3 +1,30 @@
+/*
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * COMPONENTS
+ * #header............The main page header.
+ * #footer............The main page footer.
+ * buttons..............Button elements.
+ *
+ * SECTIONS
+ *
+ * MODIFIER CLASSES
+ *
+ */
+
+/*------------------------------------*\
+  SETTINGS
+\*------------------------------------*/
+
 body {
   font-family: "Zen Antique", serif;
 }
