@@ -1,5 +1,7 @@
 /* TO DO:
-* 
+*  Create image carousel 
+* Improve CSS
+* finish inspiration fetch 
 
 /*-------------------------------------------*\
   VARIABLES
@@ -36,15 +38,15 @@ const flavourInspo = document.querySelector(".inspiration");
 
 //look at decoration and add value to total - none = 0, sprinkles = 1,
 
-cakeForm.addEventListener("submit", e => {
-  e.preventDefault();
-  let minMaxTierVal = tier.value;
-  if (minMaxTierVal === 0) {
-    alert("Cakes must be at least one tier!");
-  } else if (minMaxTierVal >= 4) {
-    alert("Cakes can be a maximum of 4 tiers to stop any caketastrophes!");
-  }
-});
+// cakeForm.addEventListener("submit", e => {
+//   e.preventDefault();
+//   let minMaxTierVal = tier.value;
+//   if (minMaxTierVal === 0) {
+//     alert("Cakes must be at least one tier!");
+//   } else if (minMaxTierVal >= 4) {
+//     alert("Cakes can be a maximum of 4 tiers to stop any caketastrophes!");
+//   }
+// });
 
 function visualise(event) {
   event.preventDefault();
@@ -65,6 +67,7 @@ function visualise(event) {
 //select the contents of all the cake images
 
 function changeVanillaTier(event) {
+  event.preventDefault();
   //access value as an integer through a variable
   const value = event.target.elements.tier.value;
   //hide all userBios
@@ -84,9 +87,8 @@ function changeVanillaTier(event) {
 
 //Function to update DOM with random recipe title
 
-
 //Function to fetch random recipe from the Guardian
-function fetchRecipe()
+// function fetchRecipe()
 /*----------------------------------------------------*\
   EVENT LISTENERS
 \*----------------------------------------------------*/
@@ -96,4 +98,4 @@ cakeForm.addEventListener("submit", visualise);
 cakeForm.addEventListener("submit", changeVanillaTier);
 
 //flavour inspiration
-flavourInspo.addEventListener("submit", fetchRecipe);
+//flavourInspo.addEventListener("submit", fetchRecipe);

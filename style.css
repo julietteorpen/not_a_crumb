@@ -25,8 +25,29 @@
   SETTINGS
 \*------------------------------------*/
 
+/*------------------------------------*\
+GENERIC
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+BASE
+\*------------------------------------*/
+
+/* body */
+/* headings */
+/* paragraphs */
+
 body {
   font-family: "Zen Antique", serif;
+  --color-navy: #2d3950;
+  --color-teal: aquamarine;
+  --color-offwhite: #ecedee;
 }
 
 /*______________________*/
@@ -35,18 +56,27 @@ body {
 .nav-list {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0.5rem;
 }
-
+.nav-tem {
+  border: 0.5;
+  border-radius: 10%;
+}
+.nav-item:hover {
+  background-color: var(--color-teal);
+  color: var(var(--color-teal));
+}
 /*______________________*/
-/* ICON CSS/*
+/* TILE CSS/*
 /*______________________*/
 
-.icon {
+.tile {
   min-width: 20rem;
   background-color: aquamarine;
-  border-radius: 25%;
-  font-size: 8rem;
+  border-radius: 15%;
+  font-size: 5vw;
+  text-align: justify;
 }
 
 /*______________________*/
@@ -55,6 +85,17 @@ body {
 
 .hidden {
   display: none;
+}
+
+/*______________________*/
+/* VISUALISER CSS/*
+/*______________________*/
+.visualiser {
+  display: flex;
+  border: thick double aquamarine;
+  border-radius: 3%;
+  max-width: 40rem;
+  text-align: justify;
 }
 
 /*______________________*/
@@ -126,15 +167,4 @@ body {
 
 .landing-title {
   display: none;
-}
-
-/*______________________*/
-/* VISUALISER CSS/*
-/*______________________*/
-.visualiser {
-  display: flex;
-  border: thick double aquamarine;
-  border-radius: 3%;
-  max-width: 40rem;
-  text-align: justify;
 }

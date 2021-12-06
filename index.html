@@ -14,56 +14,56 @@
   <header>
     <nav>
       <ul class="nav-list">
-        <li> <a href=index.html> not a crumb. </a></li>
-        <li> <a href=/recipes.html>recipes </a></li>
-        <li><a href="/order.html">order here</a></li>
-        <li>reviews</li>
+        <li > <a href=index.html class="nav-item"> not a crumb. </a></li>
+        <li > <a href=/recipes.html class="nav-item">recipes </a></li>
+        <li ><a href="/order.html" class="nav-item">order here</a></li>
+        <li ><a href="/order.html" class="nav-item">reviews</a></li>
       </ul>
     </nav>
   </header>
  <div class="grid">
-      <div class="icon">
+      <div class="width-sm tile">
         not
       </div>
       <img
         src="images/Babka temp.jpg"
         alt="Image of a chocolate and hazelnut babka"
-        class="width-sm"
+        class="width-sm tile"
       />
 
-      <div class="icon">
+      <div class="width-sm tile">
         a
       </div>
 
       <img
         src="images/marmalade.JPG"
         alt="Image of a glazed orange and marmalade cake"
-        class="width-sm"
+        class="width-sm tile"
       />
       <img
         src="images/bread.png"
         alg="Image of a freshly baked loaf of sourdough"
-        class="width-sm"
+        class="width-sm tile"
       />
 
-      <div class="icon">
+      <div class="width-sm tile">
         crumb.
       </div>
 
       <img
         src="images/ginger.png"
         alt="Image of a ginger cake with white ginger-infused icing dripping down the side"
-        class="width-sm"
+        class="width-sm tile"
       />
 
       <img
         src="images/celebration.png"
         alt="Image of a white chocolate and pistachio roulade, decorated with candles"
-        class="width-sm"
+        class="width-sm tile"
       />
     </div>
 
-    <section>
+    <!-- <section>
       <form class="inspiration">
       <p>
         Need some flavour inspiration?
@@ -71,7 +71,7 @@
       
       <button class="submit">Inspire Me!</button>
 
-      </form>
+      </form> -->
     
 
     </section>
@@ -81,7 +81,7 @@
       <h2> Cake Visualiser</h2>
 <form class="cake-form stack-md">
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" id="tier"/>
+      <input type="number" name="tier" id="tier" min="0"/>
       <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
