@@ -73,12 +73,20 @@ body {
 
 .tile {
   min-width: 20rem;
+  height: auto;
   background-color: aquamarine;
   border-radius: 15%;
-  font-size: 5vw;
-  text-align: justify;
+  font-size: 4vw;
+  text-align: left;
+  align-items: stretch;
 }
 
+.tiled-landing {
+  display: grid;
+  grid-column-gap: 25rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
 /*______________________*/
 /* JS-RELATED CSS/*
 /*______________________*/
@@ -94,8 +102,10 @@ body {
   display: flex;
   border: thick double aquamarine;
   border-radius: 3%;
-  max-width: 40rem;
-  text-align: justify;
+}
+
+.cake-form {
+  display: block;
 }
 
 /*______________________*/
@@ -105,11 +115,14 @@ body {
 .center {
   margin-left: auto;
   margin-right: auto;
-  max-width: 60rem;
 }
 
 .width-sm {
-  max-width: 20rem;
+  max-width: 100%;
+}
+
+.width-md {
+  max-width: 30%;
 }
 
 .width-lg {
@@ -151,20 +164,6 @@ body {
   justify-content: space-between;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1rem;
-}
-
 .column-lg {
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-}
-
-/*______________________*/
-/* LANDING PAGE CSS/*
-/*______________________*/
-
-.landing-title {
-  display: none;
 }
