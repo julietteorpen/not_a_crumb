@@ -1,5 +1,7 @@
 /* TO DO:
-* 
+* Create image carousel 
+* Improve CSS
+* finish inspiration fetch 
 
 /*-------------------------------------------*\
   VARIABLES
@@ -28,23 +30,10 @@ const flavourInspo = document.querySelector(".inspiration");
 \*----------------------------------------------------*/
 
 //create empty variable to hold total value
-
 //check form to see flavour selected - e.g. vanilla selected
 //if vanilla select, loop through vanilla array images
-
 //look at number of tiers. Times total by no. of tiers entered
-
 //look at decoration and add value to total - none = 0, sprinkles = 1,
-
-cakeForm.addEventListener("submit", e => {
-  e.preventDefault();
-  let minMaxTierVal = tier.value;
-  if (minMaxTierVal === 0) {
-    alert("Cakes must be at least one tier!");
-  } else if (minMaxTierVal >= 4) {
-    alert("Cakes can be a maximum of 4 tiers to stop any caketastrophes!");
-  }
-});
 
 function visualise(event) {
   event.preventDefault();
@@ -57,14 +46,14 @@ function visualise(event) {
   for (let i = 0; i < decorations.length; i++) {
     if (decorations[i].checked === true) {
       total++;
-      console.log("The cake will cost £" + total);
     }
   }
+  console.log("The cake will cost £" + total);
 }
 
 //select the contents of all the cake images
-
 function changeVanillaTier(event) {
+  event.preventDefault();
   //access value as an integer through a variable
   const value = event.target.elements.tier.value;
   //hide all userBios
@@ -82,8 +71,10 @@ function changeVanillaTier(event) {
   }
 }
 
+//Function to update DOM with random recipe title
+
 //Function to fetch random recipe from the Guardian
-function fetchRecipe()
+// function fetchRecipe()
 /*----------------------------------------------------*\
   EVENT LISTENERS
 \*----------------------------------------------------*/
@@ -93,4 +84,13 @@ cakeForm.addEventListener("submit", visualise);
 cakeForm.addEventListener("submit", changeVanillaTier);
 
 //flavour inspiration
-flavourInspo.addEventListener("submit", fetchRecipe);
+//flavourInspo.addEventListener("submit", fetchRecipe);
+
+//CAKE FORM MAX TIERS WARNING
+cakeForm.addEventListener("submit", e => {
+  e.preventDefault();
+  let minMaxTierVal = tier.value;
+  if (minMaxTierVal >= 4) {
+    alert("Cakes must be a maximum of 4 tiers to stop any caketastrophes!");
+  }
+});

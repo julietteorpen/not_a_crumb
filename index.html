@@ -14,56 +14,58 @@
   <header>
     <nav>
       <ul class="nav-list">
-        <li> <a href=index.html> not a crumb. </a></li>
-        <li> <a href=/recipes.html>recipes </a></li>
-        <li><a href="/order.html">order here</a></li>
-        <li>reviews</li>
+        <li > <a href=index.html class="nav-item"> not a crumb. </a></li>
+        <li > <a href=/recipes.html class="nav-item">recipes </a></li>
+        <li ><a href="/order.html" class="nav-item">order here</a></li>
+        <li ><a href="/order.html" class="nav-item">reviews</a></li>
       </ul>
     </nav>
   </header>
- <div class="grid">
-      <div class="icon">
-        not
+ <div class="tiled-landing">
+      <div class="width-sm tile">
+       not
+       a 
+       crumb.
       </div>
       <img
         src="images/Babka temp.jpg"
         alt="Image of a chocolate and hazelnut babka"
-        class="width-sm"
+        class="width-sm tile"
       />
 
-      <div class="icon">
-        a
+      <div class="width-sm tile">
+        design your cake.
       </div>
 
       <img
         src="images/marmalade.JPG"
         alt="Image of a glazed orange and marmalade cake"
-        class="width-sm"
+        class="width-sm tile"
       />
       <img
         src="images/bread.png"
         alg="Image of a freshly baked loaf of sourdough"
-        class="width-sm"
+        class="width-sm tile"
       />
 
-      <div class="icon">
-        crumb.
+      <div class="width-sm tile">
+      get inspiration
       </div>
 
       <img
         src="images/ginger.png"
         alt="Image of a ginger cake with white ginger-infused icing dripping down the side"
-        class="width-sm"
+        class="width-sm tile"
       />
 
       <img
         src="images/celebration.png"
         alt="Image of a white chocolate and pistachio roulade, decorated with candles"
-        class="width-sm"
+        class="width-sm tile"
       />
     </div>
 
-    <section>
+<section>
       <form class="inspiration">
       <p>
         Need some flavour inspiration?
@@ -76,12 +78,12 @@
 
     </section>
 
-<div class="visualiser center">
+<div class="visualiser center width-md">
   <section class="center">
       <h2> Cake Visualiser</h2>
-<form class="cake-form stack-md">
+<form class="cake-form stack-sm" >
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" id="tier"/>
+      <input type="number" name="tier" id="tier" min="0"/>
       <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
@@ -152,17 +154,7 @@
   </form>
 </section>
 
-<section>
-  <img src="images/visualiser/vanillaBC1.jpg" class="hidden vanilla-image one-tier" alt="An image of a 1 tier vanilla buttercream cake with candles is shown"> 
-    <img src="images/visualiser/vanillaBC2.png" class="hidden vanilla-image two-tier" alt="An image of a 2 tier vanilla buttercream cake with candles is shown"> 
-        <img src="images/visualiser/vanillaBC3.png" class="hidden vanilla-image three-tier" alt="An image of a 3 tier vanilla buttercream cake with candles is shown"> 
-        <img src="images/visualiser/vanillaBC4.png" class="hidden vanilla-image four-tier" alt="An image of a 4 tier vanilla buttercream cake with candles is shown"> 
-
-                <img src="images/visualiser/coffee-BC-sprinkles-1.png" class="hidden coffee-image one-tier" alt="An image of a 1 tier coffee buttercream cake with sprinkles is shown"> 
-                <img src="images/visualiser/coffee-BC-sprinkles-2.png" class="hidden coffee-image two-tier" alt="An image of a 2 tier coffee buttercream cake with sprinkles is shown"> 
-                <img src="images/visualiser/coffee-BC-sprinkles-3.png" class="hidden coffee-image three-tier" alt="An image of a 3 tier coffee buttercream cake with sprinkles is shown"> 
-        <img src="images/visualiser/coffee-BC-sprinkles-4.png" class="hidden coffee-image four-tier" alt="An image of a 4 tier coffee buttercream cake with sprinkles is shown"> 
-
+<section class="cake-images">
 </section>
 </div>
 
