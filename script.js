@@ -8,13 +8,14 @@
 \*-------------------------------------------*/
 
 /* Cake visualiser form */
-let cakeForm = document.querySelector("form");
+let cakeForm = document.querySelector("cake-form");
 let tier = document.querySelector("#tier");
 let flavour1 = document.querySelector("#flavour1");
 let flavour2 = document.querySelector("#flavour2");
 let flavour3 = document.querySelector("#flavour3");
 let flavour4 = document.querySelector("#flavour4");
 let flavour5 = document.querySelector("#flavour5");
+let calculateBtn = document.querySelector("#calculate-btn");
 
 /* Cake images */
 const vanillaImages = Array.from(document.querySelectorAll(".vanilla-image"));
@@ -24,7 +25,30 @@ let vanillaCake = [];
 let chocCake = [];
 
 /* Flavour inspiration*/
-const flavourInspo = document.querySelector(".inspiration");
+let flavourInspo = document.querySelector(".inspiration");
+let inspoInput = document.querySelector("#flavour-inspo");
+let submitInspo = document.querySelector("#submit-inspo");
+const guardianKey = "ffb6c45e-9bcc-4828-b865-e4f13ac02107";
+let inspoResult = document.querySelector(".fetch-inspiration");
+//Fetch and update DOM with random recipe title and link
+//Function to fetch random recipe from the Guardian
+
+function fetchRecipe(event) {
+  event.preventDefault();
+  const ingredient = inspoInput.value;
+  console.log(ingredient);
+  fetch(
+    `https://content.guardianapis.com/search?section=food&q=${ingredient}&api-key=${guardianKey}`
+  )
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.response.results);
+      let html = `<a href ="${data.response.results[0].webUrl}"> ${data.response.results[0].webTitle} <p>`;
+      inspoResult.innerHTML = html;
+    })
+    .catch(error => console.log(error));
+}
+
 /*----------------------------------------------------*\
   APP FUNCTIONS TO DISPLAY FETCHED CONTENT
 \*----------------------------------------------------*/
@@ -71,23 +95,21 @@ function changeVanillaTier(event) {
   }
 }
 
-//Function to update DOM with random recipe title
-
-//Function to fetch random recipe from the Guardian
-// function fetchRecipe()
 /*----------------------------------------------------*\
   EVENT LISTENERS
 \*----------------------------------------------------*/
 
 //cake visualiser
-cakeForm.addEventListener("submit", visualise);
-cakeForm.addEventListener("submit", changeVanillaTier);
+calculateBtn.addEventListener("submit", visualise);
+calculateBtn.addEventListener("submit", changeVanillaTier);
 
 //flavour inspiration
 //flavourInspo.addEventListener("submit", fetchRecipe);
+//fetch inspiration
+submitInspo.addEventListener("click", fetchRecipe);
 
 //CAKE FORM MAX TIERS WARNING
-cakeForm.addEventListener("submit", e => {
+calculateBtn.addEventListener("click", e => {
   e.preventDefault();
   let minMaxTierVal = tier.value;
   if (minMaxTierVal >= 4) {
