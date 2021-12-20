@@ -1,7 +1,7 @@
 /* TO DO:
-* Create image carousel 
+* Create question carousel 
 * Improve CSS
-* finish inspiration fetch 
+* finish inspiration fetch - get image from recipe page
 
 /*-------------------------------------------*\
   VARIABLES
@@ -35,17 +35,24 @@ let inspoResult = document.querySelector(".fetch-inspiration");
 
 function fetchRecipe(event) {
   event.preventDefault();
+  let url = "";
   const ingredient = inspoInput.value;
-  console.log(ingredient);
+
   fetch(
-    `https://content.guardianapis.com/search?section=food&q=${ingredient}&api-key=${guardianKey}`
+    `https://content.guardianapis.com/search?section=food&q=${ingredient} cake&api-key=${guardianKey}`
   )
     .then(response => response.json())
     .then(data => {
-      console.log(data.response.results);
-      let html = `<a href ="${data.response.results[0].webUrl}"> ${data.response.results[0].webTitle} <p>`;
+      url = `${data.response.results[0].webUrl}`;
+      let html = `<a href =${url}> ${data.response.results[0].webTitle} <p>`;
       inspoResult.innerHTML = html;
     })
+
+    // add a second fetch of the URL generated? maybe try as separated function?
+
+    // .then(fetch`${url}`)
+    // .then(response => response.json())
+    // .then(data => console.log(data))
     .catch(error => console.log(error));
 }
 
