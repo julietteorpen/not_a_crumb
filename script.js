@@ -8,20 +8,20 @@
 \*-------------------------------------------*/
 
 /* Cake visualiser form */
-let cakeForm = document.querySelector("cake-form");
-let tier = document.querySelector("#tier");
+let cakeForm = document.querySelector(".cake-form");
+let tierNumber = cakeForm.elements.tier;
 let flavour1 = document.querySelector("#flavour1");
 let flavour2 = document.querySelector("#flavour2");
 let flavour3 = document.querySelector("#flavour3");
 let flavour4 = document.querySelector("#flavour4");
 let flavour5 = document.querySelector("#flavour5");
-let calculateBtn = document.getElementById("#calculate-btn");
+let calculateBtn = document.querySelector("#calculate");
 
 /* Cake images */
-let decorations = Array.from(document.querySelectorAll("input[type=checkbox]"));
+const decorations = Array.from(
+  document.querySelectorAll("input[type=checkbox]")
+);
 console.log("decorations array", decorations);
-let vanillaCake = [];
-let chocCake = [];
 
 /* Flavour inspiration*/
 let inspoForm = document.querySelector(".inspiration");
@@ -35,50 +35,46 @@ let inspoResult = document.querySelector(".fetch-inspiration");
   EVENT LISTENERS
 \*----------------------------------------------------*/
 
-//cake visualiser
-//calculateBtn.addEventListener("submit", calculatePrice);
+//fetch inspiration
+submitInspo.addEventListener("click", fetchRecipe);
+
+// //cake visualiser
+calculateBtn.addEventListener("click", calculatePrice);
 //calculateBtn.addEventListener("click", changeVanillaTier);
 
 // //CAKE FORM MAX TIERS WARNING
-// calculateBtn.addEventListener("submit", maxTiers);
-
-// function maxTiers(e) {
+// calculateBtn.addEventListener("click", e => {
 //   e.preventDefault();
 //   let minMaxTierVal = tier.value;
-//   if (minMaxTierVal >= 4) {
+//   if (minMaxTierVal > 4) {
 //     alert("Cakes must be a maximum of 4 tiers to stop any caketastrophes!");
 //   }
-// }
+// });
 
 // //Fetch and update DOM with random recipe title and link
 // //Function to fetch random recipe from the Guardian
-// function fetchRecipe(event) {
-//   event.preventDefault();
-//   let url = "";
-//   const ingredient = inspoInput.value;
+function fetchRecipe(event) {
+  event.preventDefault();
+  let url = "";
+  const ingredient = inspoInput.value;
 
-//   fetch(
-//     `https://content.guardianapis.com/search?section=food&q=${ingredient} cake&api-key=${guardianKey}`
-//   )
-//     .then(response => response.json())
-//     .then(data => {
-//       url = `${data.response.results[0].webUrl}`;
-//       let html = `<a href =${url}> ${data.response.results[0].webTitle} <p>`;
-//       inspoResult.innerHTML = html;
-//     })
+  fetch(
+    `https://content.guardianapis.com/search?section=food&q=${ingredient} cake&api-key=${guardianKey}`
+  )
+    .then(response => response.json())
+    .then(data => {
+      url = `${data.response.results[0].webUrl}`;
+      let html = `<a href =${url}> ${data.response.results[0].webTitle} <p>`;
+      inspoResult.innerHTML = html;
+    })
 
-//     // add a second fetch of the URL generated? maybe try as separated function?
+    // add a second fetch of the URL generated? maybe try as separated function?
 
-//     // .then(fetch`${url}`)
-//     // .then(response => response.json())
-//     // .then(data => console.log(data))
-//     .catch(error => console.log(error));
-// }
-
-// //flavour inspiration
-// flavourInspo.addEventListener("submit", fetchRecipe);
-// //fetch inspiration
-// submitInspo.addEventListener("click", fetchRecipe);
+    // .then(fetch`${url}`)
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    .catch(error => console.log(error));
+}
 
 // /*----------------------------------------------------*\
 //   APP FUNCTIONS TO DISPLAY FETCHED CONTENT
@@ -90,21 +86,20 @@ let inspoResult = document.querySelector(".fetch-inspiration");
 // //look at number of tiers. Times total by no. of tiers entered
 // //look at decoration and add value to total - none = 0, sprinkles = 1,
 
-// function calculatePrice(event) {
-//   event.preventDefault();
-//   let total = 0;
-//   console.log(total);
-//   const value = event.target.elements.tier.value;
-//   total = parseInt(total) + parseInt(value);
-//   console.log(total);
-//   console.log(decorations);
-//   for (let i = 0; i < decorations.length; i++) {
-//     if (decorations[i].checked === true) {
-//       total++;
-//     }
-//   }
-//   console.log("The cake will cost £" + total);
-// }
+function calculatePrice(event) {
+  event.preventDefault();
+  let total = 0;
+  let value = tierNumber.value;
+  total = parseInt(total) + parseInt(value);
+  console.log(total);
+  console.log(decorations);
+  for (let i = 0; i < decorations.length; i++) {
+    if (decorations[i].checked === true) {
+      total++;
+    }
+  }
+  console.log("The cake will cost £" + total);
+}
 
 //select the contents of all the cake images
 // function changeVanillaTier(event) {

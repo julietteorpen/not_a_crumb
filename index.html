@@ -7,10 +7,11 @@
     <title>not a crumb.</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
-  </head>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+    
+</head>
+<body>
   <header>
     <nav>
       <ul class="nav-list">
@@ -89,7 +90,7 @@
       <h2> Cake Visualiser</h2>
 <form class="cake-form stack-sm" >
     <label for="tier"> Number of tiers</label>
-      <input type="number" name="tier" id="tier" min="0"/>
+      <input type="number" name="tier" id="tier" min="1"/>
       <p> What kind of cake would you like?</p>
       <div>  
         <input type="radio" name="flavour" id="flavour1" value="Chocolate">
@@ -156,7 +157,7 @@
          <label for="flavour"> Spun Sugar </label>
       </div>  -->
 
-  <button type="submit" id="calculate-btn">Calculate!</button>
+  <button type="submit" id="calculate">Calculate!</button>
   </form>
 </section>
 
@@ -184,6 +185,6 @@
     <aside>
       <h3>Enquire now!</h3>
 
-      <script src="script.js" ></script>
-  </body>
+       <script src="script.js" defer></script>
+</body>
 </html>
